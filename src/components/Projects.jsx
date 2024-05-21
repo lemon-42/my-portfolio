@@ -8,7 +8,7 @@ const Projects = () => {
         {projectData && projectData.map((project) => (
           <div className="project-card" key={project.id}>
             <div className="project-header">
-              <i className="fa-regular fa-folder-open folder-icon"></i>
+              <i className="fa-regular fa-folder-open folder-icon" style={{ color: '#FABD2F' }}></i>
               <div className="small-icons">
                 <a href={project.gitHubLink}><i className="fa-brands fa-github"></i></a>
               </div>

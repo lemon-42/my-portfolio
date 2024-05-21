@@ -8,7 +8,7 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #1D1E20;
+  background-color: #32302F;
   color: #DADADB;
   width: 900px;
   margin: 0 auto;
@@ -37,7 +37,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  background-color: #1D1E20;
+  background-color: #32302F;
 }
 
 .nav-container .logo {
@@ -81,7 +81,7 @@ hr {
   justify-content: space-around;
   align-items: center;
   padding: 2rem 0;
-  background-color: #1D1E20;
+  background-color: #32302F;
 }
 
 .footer-container p {
@@ -118,9 +118,8 @@ hr {
 }
 
 .hero-container .profile-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -205,7 +204,7 @@ hr {
   object-fit: cover;
   border: 2px solid #DADADB;
   filter: grayscale(100%);
-  transition: all 0.5s ease-in-out;
+  /*transition: all 0.5s ease-in-out;*/
   cursor: cell;
 }
 
