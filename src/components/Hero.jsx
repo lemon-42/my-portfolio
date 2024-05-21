@@ -5,9 +5,9 @@ const Hero = () => {
 		<div className="hero-container">
 			<Image src='/images/julien.jpg' className='profile-img' width={300} height={300} alt="Lemon's personal headshot" />
 			<div className='hero-text'>
-				<h1>Hey, I'm Julien 👋</h1>
+				<h1>Hey, I&apos;m Julien 👋</h1>
 				<p>
-					I'm a student full stack developper working in Zone01 Rouen Normandie. I like Linux, Open Source, and Free software!
+					I&apos;m a student full stack developper working in Zone01 Rouen Normandie. I like Linux, Open Source, and Free software!
 				</p>
 				<div className='social_icons'>
 				  <a
