@@ -8,7 +8,7 @@ const { Prism: SyntaxHighlighter } = require('react-syntax-highlighter');
 const { gruvboxDark } = require('react-syntax-highlighter/dist/cjs/styles/prism');
 import styles from "./ProjectDetails.module.css";
 
-const ProjectDetail = ({ project }) => {
+/*const ProjectDetail = ({ project }) => {
   const router = useRouter();
 
   if (!project) {
@@ -44,6 +44,47 @@ const ProjectDetail = ({ project }) => {
           }
         }}
       >
+        {project.content}
+      </ReactMarkdown>
+      <br />
+      <Link href="/projects" legacyBehavior>
+        <a className={styles.backLink}>Back to projects</a>
+      </Link>
+    </div>
+  );
+};
+*/
+
+const ProjectDetail = ({ project }) => {
+  const router = useRouter();
+
+  if (!project) {
+    return <p>Project not found</p>;
+  }
+
+  const renderers = {
+    code({ language, value }) {
+      return (
+        <SyntaxHighlighter
+          style={gruvboxDark}
+          language={language}
+        >
+          {value}
+        </SyntaxHighlighter>
+      );
+    },
+    a({ href, children, ...props }) {
+      return (
+        <a href={href} className={styles.link} {...props}>
+          {children}
+        </a>
+      );
+    }
+  };
+
+  return (
+    <div className={styles.container}>
+      <ReactMarkdown components={renderers}>
         {project.content}
       </ReactMarkdown>
       <br />
